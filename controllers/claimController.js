@@ -34,8 +34,8 @@ exports.getClaimHistory = async (req, res) => {
     const { userId } = req.params;
 
     const history = await ClaimHistory.find({ userId })
-      .sort({ createdAt: -1 }) // latest first
-      .limit(20); // limit to recent 20 (optional)
+      .sort({ createdAt: -1 })
+      .limit(20);
 
     res.json(history);
   } catch (err) {

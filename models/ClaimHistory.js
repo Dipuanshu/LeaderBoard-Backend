@@ -8,7 +8,7 @@ const claimHistorySchema = new mongoose.Schema(
     userName: String,
     claimedPoints: Number,
   },
-  { timestamps: true } // 👈 auto adds createdAt and updatedAt
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("ClaimHistory", claimHistorySchema);
