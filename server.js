@@ -19,6 +19,9 @@ app.use(express.json());
 app.use("/api", userRoutes);
 app.use("/api", claimRoutes);
 
+app.get("/", async (req, res) => {
+  res.send("Server Start");
+});
 //app.post("/updateUser", async (req, res) => {
 // const result = await User.updateMany({}, { $set: { points: 0 } });
 //  res.send(result);
